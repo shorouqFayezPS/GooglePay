@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/PaymentGateway
+/src/PaymentGateway.API/obj
+/src/PaymentGateway.Application/obj
+/src/PaymentGateway.Domain/obj
+/src/PaymentGateway.Infrastructure/obj
+/src/PaymentGateway.Application/bin/Debug/net8.0
+/src/PaymentGateway.Domain/bin/Debug/net8.0
+/src/PaymentGateway.Infrastructure/bin/Debug/net8.0
+/src/PaymentGateway.API/bin/Debug/net8.0
