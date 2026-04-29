@@ -24,7 +24,9 @@ VALUES
         "SecretKey": "sk_sbox_XXXXXXXXXXXXXXXXXXXXXXXX",
         "PublicKey": "pk_sbox_XXXXXXXXXXXXXXXXXXXXXXXX",
         "WebhookSecret": "your_webhook_secret_here",
-        "ProcessingChannelId": "pc_XXXXXXXXXXXXXXXXXXXXXXXX"
+        "ProcessingChannelId": "pc_XXXXXXXXXXXXXXXXXXXXXXXX",
+        "GatewayName": "Checkout.com",
+        "GatewayMerchantId": "XX"
     }',
     0,
     GETUTCDATE(),

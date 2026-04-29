@@ -120,6 +120,7 @@ public sealed class InitiatePaymentCommandHandler
             CancelUrl = cmd.CancelUrl,
             SecretKey = credentials.SecretKey,
             ProcessingChannelId = credentials.ProcessingChannelId,
+            GatewayMerchantId = credentials.GatewayMerchantId,
             TransactionId = transactionId,
             ApiBaseUrl = config.ApiBaseUrl
         };

@@ -19,6 +19,7 @@ public sealed record CreateCheckoutSessionRequest
     public string? CancelUrl { get; init; }
     public string SecretKey { get; init; } = null!;
     public string? ProcessingChannelId { get; init; }
+    public string GatewayMerchantId { get; init; } = null!;
     public Guid TransactionId { get; init; }
     public string ApiBaseUrl { get; init; } = null!;
 }
