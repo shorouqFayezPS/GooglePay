@@ -20,6 +20,14 @@ public sealed record CreateCheckoutSessionRequest
     public string SecretKey { get; init; } = null!;
     public string? ProcessingChannelId { get; init; }
     public string GatewayMerchantId { get; init; } = null!;
+
+    /// <summary>
+    /// ISO 3166-1 alpha-2 country code for billing address.
+    /// Must be a country supported by Google Pay.
+    /// Comes from GatewayConfigurations — do not hardcode.
+    /// </summary>
+    public string BillingCountry { get; init; } = null!;
+
     public Guid TransactionId { get; init; }
     public string ApiBaseUrl { get; init; } = null!;
 }

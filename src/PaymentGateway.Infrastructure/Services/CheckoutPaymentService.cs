@@ -50,7 +50,7 @@ public sealed class CheckoutPaymentService : ICheckoutPaymentService
             reference = request.OrderNumber,
             billing = new
             {
-                address = new { country = "BH" }  // Extend as needed per gateway config
+                address = new { country = request.BillingCountry }
             },
             customer = new
             {

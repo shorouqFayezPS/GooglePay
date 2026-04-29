@@ -121,6 +121,7 @@ public sealed class InitiatePaymentCommandHandler
             SecretKey = credentials.SecretKey,
             ProcessingChannelId = credentials.ProcessingChannelId,
             GatewayMerchantId = credentials.GatewayMerchantId,
+            BillingCountry = credentials.BillingCountry,
             TransactionId = transactionId,
             ApiBaseUrl = config.ApiBaseUrl
         };

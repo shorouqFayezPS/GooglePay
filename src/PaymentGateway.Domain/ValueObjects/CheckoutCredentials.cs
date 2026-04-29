@@ -23,4 +23,11 @@ public sealed record CheckoutCredentials
 
     /// <summary>Merchant ID assigned by Checkout.com — sent to Google Pay SDK on the client.</summary>
     public string GatewayMerchantId { get; init; } = null!;
+
+    /// <summary>
+    /// ISO 3166-1 alpha-2 billing country code (e.g. "BH", "SA", "AE").
+    /// Must be a country supported by Google Pay per Checkout.com docs.
+    /// Stored per gateway config — never hardcode.
+    /// </summary>
+    public string BillingCountry { get; init; } = null!;
 }

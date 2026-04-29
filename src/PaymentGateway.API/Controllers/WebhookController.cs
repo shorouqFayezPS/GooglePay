@@ -41,12 +41,15 @@ public sealed class WebhookController : ControllerBase
             return BadRequest("Empty payload.");
         }
 
-        // Checkout sends the signature in the cko-signature header
-        var signature = Request.Headers["cko-signature"].FirstOrDefault() ?? string.Empty;
+        // Checkout sends the signature in the Cko-Signature header
+        // Header name is case-insensitive in HTTP but match docs exactly
+        var signature = Request.Headers["Cko-Signature"].FirstOrDefault()
+                     ?? Request.Headers["cko-signature"].FirstOrDefault()
+                     ?? string.Empty;
 
         if (string.IsNullOrEmpty(signature))
         {
-            _logger.LogWarning("Missing cko-signature header");
+            _logger.LogWarning("Missing Cko-Signature header");
             return Unauthorized("Missing webhook signature.");
         }
 
